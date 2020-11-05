@@ -9,16 +9,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green.shade700,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Center(
-                child: CircleAvatar(
-                  radius: 80.0,
-                  backgroundImage: AssetImage('images/olena.jpg'),
-                ),
+              CircleAvatar(
+                radius: 80.0,
+                backgroundImage: AssetImage('images/olena.jpg'),
               ),
               Text(
                 'Olena Machushnyk',
@@ -34,7 +32,63 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'SourceSansPro',
                   fontSize: 20.0,
-                  color: Colors.blue.shade100,
+                  color: Colors.green.shade100,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.green.shade50,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      size: 30.0,
+                      color: Colors.green.shade700,
+                    ),
+                    title: Text(
+                      '+38 097 123 45 67',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        color: Colors.green.shade900,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.green.shade700,
+                    ),
+                    title: Text(
+                      'developer6.prog@gmail.com',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        color: Colors.green.shade900,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],
